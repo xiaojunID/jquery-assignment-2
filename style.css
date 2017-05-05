@@ -6,3 +6,7 @@
 .email[href^="mailto:"] {
     text-decoration: underline;
 }
+
+.user-profile{
+    background-color:green;
+}
