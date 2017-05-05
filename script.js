@@ -10,7 +10,7 @@ $.ajax({
 
 function updateUserInformation(index,user){
     var $user= $('.user-profile').eq(index);
-    $user.find('.name').text(user.name.first + user.name.last);
+    $user.find('.name').text(user.name.first +' '+user.name.last);
     $user.find('img')
         .attr('src',user.picture);
     $user.find('.company')
@@ -26,11 +26,8 @@ function updateUserInformation(index,user){
         .find('.state')
         .text(user.company.address.state);
     $user.find('.company')
-        .find('.a')
-        .find('.email')
-        .text(user.company.email);
-    $user.find('.company')
         .find('a')
+        .text(user.company.email)
         .attr('href','mailto:'+ user.company.email);
     $user.css('background',user.favoriteColor);
 }
